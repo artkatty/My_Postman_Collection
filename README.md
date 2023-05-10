@@ -1,4 +1,4 @@
 # My_Postman_Collection
-## ***Petstore***
+## **Petstore**
 ____________________________
 https://petstore.swagger.io/
