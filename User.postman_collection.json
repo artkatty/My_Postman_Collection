@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "d8f68d6d-625a-4953-af70-1e8c120b87ef",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25783416"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1711,\r\n  \"username\": \"Ted123\",\r\n  \"firstName\": \"Ted\",\r\n  \"lastName\": \"Lasso\",\r\n  \"email\": \"TedLasso@gmail.com\",\r\n  \"password\": \"string\",\r\n  \"phone\": \"+79179850023\",\r\n  \"userStatus\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/:username",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						":username"
+					],
+					"variable": [
+						{
+							"key": "username",
+							"value": "Ted123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createWithArray",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": 1711,\r\n        \"username\": \"Ted123\",\r\n        \"firstName\": \"Ted\",\r\n        \"lastName\": \"Lasso\",\r\n        \"email\": \"TedLasso@gmail.com\",\r\n        \"password\": \"string\",\r\n        \"phone\": \"+79179850023\",\r\n        \"userStatus\": 0\r\n    },\r\n    {\r\n        \"id\": 1920,\r\n        \"username\": \"Mary89\",\r\n        \"firstName\": \"Mary\",\r\n        \"lastName\": \"Lasso\",\r\n        \"email\": \"MaryLasso@gmail.com\",\r\n        \"password\": \"string\",\r\n        \"phone\": \"+79179850088\",\r\n        \"userStatus\": 0\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/createWithArray",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"createWithArray"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updated user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n        \"id\": 1920,\r\n        \"username\": \"Mary89\",\r\n        \"firstName\": \"MaryRAY\",\r\n        \"lastName\": \"Lasso\",\r\n        \"email\": \"MaryRAYLasso@gmail.com\",\r\n        \"password\": \"string\",\r\n        \"phone\": \"+79179850088\",\r\n        \"userStatus\": 0\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/:Mary89",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						":Mary89"
+					],
+					"variable": [
+						{
+							"key": "Mary89",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/login?status=Mary89&passwort=1711",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "Mary89"
+						},
+						{
+							"key": "passwort",
+							"value": "1711"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/logout",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/Ted123",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"Ted123"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
