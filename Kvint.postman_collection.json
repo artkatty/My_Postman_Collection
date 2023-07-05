@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "36584f99-67da-437f-b200-b39374dc38aa",
+		"name": "Kvint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25783416"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"login\": \"test-task\",\r\n  \"password\": \"aW632kChLkO0i8gqXKuJ0UW\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.services.staging.infra.kvint.io/auth/authorize?login=test-task&password=aW632kChLkO0i8gqXKuJ0UW",
+					"protocol": "https",
+					"host": [
+						"api",
+						"services",
+						"staging",
+						"infra",
+						"kvint",
+						"io"
+					],
+					"path": [
+						"auth",
+						"authorize"
+					],
+					"query": [
+						{
+							"key": "login",
+							"value": "test-task"
+						},
+						{
+							"key": "password",
+							"value": "aW632kChLkO0i8gqXKuJ0UW"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlblR5cGUiOiJhcHBfYWNjZXNzIiwiaWQiOiI2NDRhYzU4MDBhNjk4NDQxZmNmZWU3NjAiLCJuYW1lIjoidGVzdC10YXNrIiwicHJvamVjdCI6bnVsbCwiaWF0IjoxNjgzMDQ5NTQ2LCJleHAiOjE2ODMzMDg3NDZ9.MFfSC9g7GQRk1XbJFWMvh_NiD1vwv2tFEW7h8MyKtw8",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlblR5cGUiOiJhcHBfcmVmcmVzaCIsImlkIjoiNjQ0YWM1ODAwYTY5ODQ0MWZjZmVlNzYwIiwibmFtZSI6InRlc3QtdGFzayIsInByb2plY3QiOm51bGwsImlhdCI6MTY4MzA0OTU0NiwiZXhwIjoxNjg1NjQxNTQ2fQ.stG0lqe03NsLr0Wn9OwSLD36qufxCE08t90RXC6Fomw\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.services.staging.infra.kvint.io/auth/refresh",
+					"protocol": "https",
+					"host": [
+						"api",
+						"services",
+						"staging",
+						"infra",
+						"kvint",
+						"io"
+					],
+					"path": [
+						"auth",
+						"refresh"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "campaignId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlblR5cGUiOiJhcHBfYWNjZXNzIiwiaWQiOiI2NDRhYzU4MDBhNjk4NDQxZmNmZWU3NjAiLCJuYW1lIjoidGVzdC10YXNrIiwicHJvamVjdCI6bnVsbCwiaWF0IjoxNjgzNjIwNjc1LCJleHAiOjE2ODM4Nzk4NzV9.fy8B5B4dxD-eyQNzVY7kgbvepQJj8qfX1oTCYDe92Cc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlblR5cGUiOiJhcHBfYWNjZXNzIiwiaWQiOiI2NDRhYzU4MDBhNjk4NDQxZmNmZWU3NjAiLCJuYW1lIjoidGVzdC10YXNrIiwicHJvamVjdCI6bnVsbCwiaWF0IjoxNjgzMDQ5NTQ2LCJleHAiOjE2ODMzMDg3NDZ9.MFfSC9g7GQRk1XbJFWMvh_NiD1vwv2tFEW7h8MyKtw8",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.services.staging.infra.kvint.io/mysql/campaigns/:campaignId",
+					"protocol": "https",
+					"host": [
+						"api",
+						"services",
+						"staging",
+						"infra",
+						"kvint",
+						"io"
+					],
+					"path": [
+						"mysql",
+						"campaigns",
+						":campaignId"
+					],
+					"variable": [
+						{
+							"key": "campaignId",
+							"value": "23739"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "builds по id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlblR5cGUiOiJhcHBfYWNjZXNzIiwiaWQiOiI2NDRhYzU4MDBhNjk4NDQxZmNmZWU3NjAiLCJuYW1lIjoidGVzdC10YXNrIiwicHJvamVjdCI6bnVsbCwiaWF0IjoxNjgzNjIwNjc1LCJleHAiOjE2ODM4Nzk4NzV9.fy8B5B4dxD-eyQNzVY7kgbvepQJj8qfX1oTCYDe92Cc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlblR5cGUiOiJhcHBfYWNjZXNzIiwiaWQiOiI2NDRhYzU4MDBhNjk4NDQxZmNmZWU3NjAiLCJuYW1lIjoidGVzdC10YXNrIiwicHJvamVjdCI6bnVsbCwiaWF0IjoxNjgzMDQ5NTQ2LCJleHAiOjE2ODMzMDg3NDZ9.MFfSC9g7GQRk1XbJFWMvh_NiD1vwv2tFEW7h8MyKtw8",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.services.staging.infra.kvint.io/builds/6447da6780ceafade6ef12c6",
+					"protocol": "https",
+					"host": [
+						"api",
+						"services",
+						"staging",
+						"infra",
+						"kvint",
+						"io"
+					],
+					"path": [
+						"builds",
+						"6447da6780ceafade6ef12c6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
