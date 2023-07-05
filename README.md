@@ -1,15 +1,15 @@
 # My_Postman_Collection
 
-Тестирование REST/API через POSTMAN [label](../../../../OneDrive/Desktop/download.htm)
+Тестирование REST/API через POSTMAN
 
-Для тестирования использовался открытый API:
+Для тестирования использовались открытые API:
 ____________________________
-## ***Petstore***
+# ***Petstore***
 https://petstore.swagger.io/
 
 ![Alt text](PETS.png)
 ____________________________
-## ***Kvint***
+# ***Kvint***
 https://api.services.staging.infra.kvint.io/docs/
 
 ![Alt text](Kvint.png)
